@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 
 const Watch = () => {
     const [steps, setSteps] = useState(0);
@@ -8,7 +8,11 @@ const Watch = () => {
         setSteps(newStepsCount); 
         // console.log(steps)
     }
-  
+    	  // advanced
+          useEffect( () =>{
+            console.log(steps)
+        },[steps])
+    
     return (
         <div>
             <h3>I need a smart watch</h3>
